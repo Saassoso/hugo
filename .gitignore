@@ -1,3 +1,5 @@
+.gitignore
+
 /config.yaml
 /content
 /static/images
@@ -15,6 +17,6 @@ hugo_stats.json
 hugo.exe
 hugo.darwin
 hugo.linux
-
+/images/image.jpg
 # Temporary lock file while building
 .hugo_build.lock
