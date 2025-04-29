@@ -88,20 +88,20 @@ params:
   navbar:
     align: ms-auto
     brandName: "Saassoso"
-    disableSearch: false
+    disableSearch: true
     stickyNavBar:
       enable: true
       showOnScrollUp: true
     enableSeparator: false
     menus:
-      disableAbout: false
-      disableExperience: false
-      disableEducation: false
-      disableProjects: false
-      disableAchievements: false
+      disableAbout: true
+      disableExperience: true
+      disableEducation: true
+      disableProjects: true
+      disableAchievements: true
       disableGallery: true
       disablePosts: true
-      disableContact: false
+      disableContact: true
 
   hero:
     enable: true
@@ -262,7 +262,7 @@ params:
       path: "blogs"
       count: 3
       title: Recent Posts
-      enable: true
+      enable: false
       disableFeaturedImage: false
     socialNetworks:
       github: https://github.com/Saassoso
