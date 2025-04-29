@@ -1,6 +1,6 @@
 baseURL: "https://hugo-profile.netlify.app"
 languageCode: "en-us"
-title: "Hugo Profile"
+title: "Saassoso"
 theme: hugo-profile
 
 outputs:
@@ -24,55 +24,50 @@ markup:
 
 Menus:
   main:
-    - identifier: dropdown
+    - identifier: profile
       title: Profile
       name: Profile
+      url: /
       weight: 1
 
     - identifier: about
       name: About Me
       title: About
       url: /#about
-      parent: dropdown
       weight: 1
 
     - identifier: experience
       name: Experience
       title: Experience
       url: /#experience
-      parent: dropdown
       weight: 2
 
     - identifier: education
       name: Education
       title: Education
       url: /#education
-      parent: dropdown
       weight: 3
 
     - identifier: projects
       name: Projects
       title: Projects
       url: /#projects
-      parent: dropdown
       weight: 4
 
     - identifier: achievements
       name: Achievements
       title: Achievements
       url: /#achievements
-      parent: dropdown
       weight: 5
 
     - identifier: contact
       name: Contact
       title: Contact
       url: /#contact
-      parent: dropdown
       weight: 6
 
 params:
-  title: "Portfolio"
+  title: "Saassoso"
   description: "my cool site"
   favicon: ""
 
@@ -92,19 +87,21 @@ params:
 
   navbar:
     align: ms-auto
-    brandName: "Hugo Profile"
+    brandName: "Saassoso"
     disableSearch: false
     stickyNavBar:
       enable: true
       showOnScrollUp: true
     enableSeparator: false
     menus:
-      disableAbout: true
-      disableExperience: true
-      disableEducation: true
-      disableProjects: true
-      disableAchievements: true
-      disableContact: true
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableGallery: true
+      disablePosts: true
+      disableContact: false
 
   hero:
     enable: true
@@ -126,7 +123,7 @@ params:
         - icon: fab fa-github
           url: https://github.com/Saassoso
         - icon: fab fa-x-twitter
-          url: https://c.com/Saassoso
+          url: https://x.com/Saassoso
 
   about:
     enable: true
@@ -268,10 +265,10 @@ params:
       enable: true
       disableFeaturedImage: false
     socialNetworks:
-      github: https://github.com
+      github: https://github.com/Saassoso
       linkedin: https://linkedin.com
-      twitter: https://twitter.com
-      instagram: https://instagram.com
+      twitter: https://twitter.com/Saassoso
+      instagram: https://instagram.com/Saassoso
       facebook: https://facebook.com
 
   listPages:
