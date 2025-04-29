@@ -14,12 +14,6 @@ outputs:
 
 enableRobotsTXT: true
 
-#services:
-  #googleAnalytics:
-    #id: G-MEASUREMENT_ID
-  #disqus:
-    #shortname: your-disqus-shortname
-
 pagination:
   pagerSize: 3
 
@@ -30,117 +24,97 @@ markup:
 
 Menus:
   main:
-    - identifier: blog
-      name: Blog
-      title: Blog posts
-      url: /blogs
+    - identifier: dropdown
+      title: Profile
+      name: Profile
       weight: 1
-    - identifier: gallery
-      name: Gallery
-      title: Blog posts
-      url: /gallery
+
+    - identifier: about
+      name: About Me
+      title: About
+      url: /#about
+      parent: dropdown
+      weight: 1
+
+    - identifier: experience
+      name: Experience
+      title: Experience
+      url: /#experience
+      parent: dropdown
       weight: 2
-    #Dropdown menu
-    # - identifier: dropdown
-    #   title: Example dropdown menu
-    #   name: Dropdown
-    #   weight: 3
-    # - identifier: dropdown1
-    #   title: example dropdown 1
-    #   name: example 1
-    #   url: /#
-    #   parent: dropdown
-    #   weight: 1
-    # - identifier: dropdown2
-    #   title: example dropdown 2
-    #   name: example 2
-    #   url: /#
-    #   parent: dropdown
-    #   weight: 2
+
+    - identifier: education
+      name: Education
+      title: Education
+      url: /#education
+      parent: dropdown
+      weight: 3
+
+    - identifier: projects
+      name: Projects
+      title: Projects
+      url: /#projects
+      parent: dropdown
+      weight: 4
+
+    - identifier: achievements
+      name: Achievements
+      title: Achievements
+      url: /#achievements
+      parent: dropdown
+      weight: 5
+
+    - identifier: contact
+      name: Contact
+      title: Contact
+      url: /#contact
+      parent: dropdown
+      weight: 6
 
 params:
   title: "Portfolio"
-  description: my cool site
-  # staticPath: ""  # The path to serve the static files from
+  description: "my cool site"
   favicon: ""
 
-  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
-  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
-  # Note the lack of "" in true, it should be of boolean type.
   useBootstrapCDN: false
-
-  # If you want to load dynamically responsive images from Cloudinary
-  # This requires your images to be uploaded + hosted on Cloudinary
-  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
-  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
-
-  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
   mathjax: false
-
-  # Whether the fade animations on the home page will be enabled
   animate: true
 
   theme:
     # disableThemeToggle: true
-    # defaultTheme: "light" # dark
+    # defaultTheme: "light"
 
   font:
-    fontSize: 1rem # default: 1rem
-    fontWeight: 400 # default: 400
-    lineHeight: 1.5 # default: 1.5
-    textAlign: left # default: left
+    fontSize: 1rem
+    fontWeight: 400
+    lineHeight: 1.5
+    textAlign: left
 
-  # color preference
-  # When using hex codes for colors, quotations must be used along with the # sign
-  # color:
-  #   textColor: "#343a40"
-  #   secondaryTextColor: "#6c757d"
-  #   textLinkColor: "#007bff"
-  #   backgroundColor: "#eaedf0"
-  #   secondaryBackgroundColor: "#64ffda1a"
-  #   primaryColor: "#007bff"
-  #   secondaryColor: "#f8f9fa"
-
-  #   darkmode:
-  #     textColor: "#e4e6eb"
-  #     secondaryTextColor: "#b0b3b8"
-  #     textLinkColor: "#ffffff"
-  #     backgroundColor: "#18191a"
-  #     secondaryBackgroundColor: "#212529"
-  #     primaryColor: "#ffffff"
-  #     secondaryColor: "#212529"
-
-  # If you want to customize the menu, you can change it here
   navbar:
-    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
-    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
-    # showBrandLogo: false # Show brand logo in nav bar | default is true
-    brandName: "Hugo Profile" # Brand name for the brand | default is the title variable
+    align: ms-auto
+    brandName: "Hugo Profile"
     disableSearch: false
-    # searchPlaceholder: "Search"
     stickyNavBar:
-      enable : true
-      showOnScrollUp : true
+      enable: true
+      showOnScrollUp: true
     enableSeparator: false
     menus:
-      disableAbout: false
-      disableExperience: false
-      disableEducation: false
-      disableProjects: false
-      disableAchievements: false
-      disableContact: false
+      disableAbout: true
+      disableExperience: true
+      disableEducation: true
+      disableProjects: true
+      disableAchievements: true
+      disableContact: true
 
-  # Hero
   hero:
     enable: true
     intro: "Hi, my name is"
     title: "Saad Charif."
     subtitle: "Cybersecurity Student"
     content: "Master's student in Computer Engineering and System Security, passionate about cybersecurity and secure coding practices."
-    image: /images/image.jpg 
+    image: /images/image.jpg
     bottomImage:
       enable: true
-    # roundImage: true # Make hero image circular | default false
     button:
       enable: true
       name: "Resume"
@@ -154,83 +128,79 @@ params:
         - icon: fab fa-x-twitter
           url: https://c.com/Saassoso
 
-  # About
-about:
-  enable: true
-  title: "About Me"
-  image: "/images/me.png"
-  content: |-
-    I'm currently pursuing a Master's in Computer Engineering and System Security at the Faculty of Sciences of Rabat. 
-    
-    I am passionate about cybersecurity and committed to building safer digital environments. 
-    
-    With hands-on experience in secure coding, problem solving, and critical thinking, I aim to contribute to the security of web applications and digital infrastructures.
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/me.png"
+    content: |-
+      I'm currently pursuing a Master's in Computer Engineering and System Security at the Faculty of Sciences of Rabat. 
 
-  skills:
-  enable: true
-  title: "Key Skills"
-  items:
-    - "Secure Coding Practices"
-    - "Problem Solving"
-    - "Critical Thinking"
-    - "Python"
-    - "Cybersecurity Fundamentals"
+      I am passionate about cybersecurity and committed to building safer digital environments. 
 
+      With hands-on experience in secure coding, problem solving, and critical thinking, I aim to contribute to the security of web applications and digital infrastructures.
+    skills:
+      enable: true
+      title: "Key Skills"
+      items:
+        - "Secure Coding Practices"
+        - "Problem Solving"
+        - "Critical Thinking"
+        - "Python"
+        - "Cybersecurity Fundamentals"
 
-experience:
-  enable: true
-  items:
-    - job: "Cybersecurity Intern"
-      company: "CodeAlpha"
-      date: "Nov 2024"
-      content: |
-        - Built a network sniffer using Python
-        - Conducted phishing awareness training
-        - Performed secure code review
+  experience:
+    enable: true
+    items:
+      - job: "Cybersecurity Intern"
+        company: "CodeAlpha"
+        date: "Nov 2024"
+        content: |
+          - Built a network sniffer using Python
+          - Conducted phishing awareness training
+          - Performed secure code review
 
-    - job: "Volunteer"
-      company: "Ministry of Youth, Culture and Communication – Morocco"
-      date: "Jul 2024 – Aug 2024"
-      content: |
-        - Participated in national civic engagement initiative “Motatawi3 – 2”
-        - Led awareness campaigns and community service projects
-        - Gained hands-on experience in teamwork, leadership, and communication
+      - job: "Volunteer"
+        company: "Ministry of Youth, Culture and Communication – Morocco"
+        date: "Jul 2024 – Aug 2024"
+        content: |
+          - Participated in national civic engagement initiative “Motatawi3 – 2”
+          - Led awareness campaigns and community service projects
+          - Gained hands-on experience in teamwork, leadership, and communication
 
-    - job: "Active Member"
-      company: "Robotics Club FSR"
-      date: "Oct 2023 – Present"
-      content: |
-        - Past member of the documentation cell
-        - Engaged in robotics-focused team projects
+      - job: "Active Member"
+        company: "Robotics Club FSR"
+        date: "Oct 2023 – Present"
+        content: |
+          - Past member of the documentation cell
+          - Engaged in robotics-focused team projects
 
-    - job: "Active Member"
-      company: "Enactus FSR"
-      date: "Oct 2023 – Nov 2024"
-      content: |
-        - Member of Writing and Communication Cells
-        - Participant in Project VidaCard
+      - job: "Active Member"
+        company: "Enactus FSR"
+        date: "Oct 2023 – Nov 2024"
+        content: |
+          - Member of Writing and Communication Cells
+          - Participant in Project VidaCard
 
-education:
-  enable: true
-  items:
-    - title: "Master's in Computer Engineering and System Security"
-      school:
-        name: "Faculty of Sciences, Rabat"
-      date: "Oct 2024 –> Present"
-    - title: "Bachelor's Degree in Mathematics and Computer Science"
-      school:
-        name: "Faculty of Sciences, Rabat"
-      date: "Sep 2023 – Jul 2024"
-    - title: "DEUG in Computer Science"
-      school:
-        name: "Faculty of Sciences, Rabat"
-      date: "Sep 2021 – Jun 2023"
-    - title: "Baccalauréat, Sciences Mathématiques B"
-      school:
-        name: "Moulay Tayeb El Alaoui"
-      date: "Sep 2020 – Jun 2021"
+  education:
+    enable: true
+    items:
+      - title: "Master's in Computer Engineering and System Security"
+        school:
+          name: "Faculty of Sciences, Rabat"
+        date: "Oct 2024 – Present"
+      - title: "Bachelor's Degree in Mathematics and Computer Science"
+        school:
+          name: "Faculty of Sciences, Rabat"
+        date: "Sep 2023 – Jul 2024"
+      - title: "DEUG in Computer Science"
+        school:
+          name: "Faculty of Sciences, Rabat"
+        date: "Sep 2021 – Jun 2023"
+      - title: "Baccalauréat, Sciences Mathématiques B"
+        school:
+          name: "Moulay Tayeb El Alaoui"
+        date: "Sep 2020 – Jun 2021"
 
-  # Achievements
   achievements:
     enable: true
     items:
@@ -254,7 +224,6 @@ education:
         content: Earned recognition for mastering the basics of cybersecurity practices.
         image: /images/achievement.jpg
 
-
   projects:
     enable: true
     items:
@@ -271,6 +240,7 @@ education:
         links:
           - icon: fab fa-github
             url: "https://github.com/Saassoso/iot-health-surveillance"
+
       - title: "CodeAlpha Tasks"
         content: "A collection of Java-based tasks and solutions developed during the CodeAlpha program."
         image: "/images/projects/codealpha_tasks.jpg"
@@ -284,20 +254,11 @@ education:
           - icon: fab fa-github
             url: "https://github.com/Saassoso/CodeAlpha-tasks"
 
-
-  #Contact
   contact:
     enable: true
     content: "Feel free to reach out! Whether it's for collaboration or just to say hi, I’ll get back to you soon."
     btnName: Mail me
     btnLink: mailto:aljadid201@gmail.com
-
-    # formspree:
-    #   enable: true # `contact.email` value will be ignored
-    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
-    #   emailCaption: "Enter your email address"
-    #   messageCaption: "Enter your message here"
-    #   messageRows: 5
 
   footer:
     recentPosts:
@@ -313,11 +274,9 @@ education:
       instagram: https://instagram.com
       facebook: https://facebook.com
 
-  # List pages like blogs and posts
   listPages:
     disableFeaturedImage: false
 
-  # Single pages like blog and post
   singlePages:
     socialShare: true
     readTime:
@@ -328,7 +287,6 @@ education:
     tags:
       openInNewTab: true
 
-  # For translations
   terms:
     read: "Read"
     toc: "Table Of Contents"
@@ -340,6 +298,3 @@ education:
     article: "Jan 2, 2006"
     articleList: "Jan 2, 2006"
     articleRecent: "Jan 2, 2006"
-
-  #customScripts: -| # You can add custom scripts which will be added before </body> tag
-  #  <script type="text/javascript"><!-- any script here --></script>
