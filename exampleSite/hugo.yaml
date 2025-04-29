@@ -109,7 +109,7 @@ params:
     title: "Saad Charif."
     subtitle: "Cybersecurity Student"
     content: "Master's student in Computer Engineering and System Security, passionate about cybersecurity and secure coding practices."
-    image: https://www.flaticon.com/free-icon/boy_3667740?term=male+student&page=1&position=25&origin=tag&related_id=3667740
+    image: ../static/images/boy.png
     bottomImage:
       enable: true
     button:
